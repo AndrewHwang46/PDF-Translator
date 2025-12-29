@@ -25,10 +25,16 @@ st.markdown("""
         padding: 1rem 0;
     }
     .info-box {
-        background-color: #f0f2f6;
+        background-color: #263238;  /* Dark gray */
+        border-left: 4px solid #00BCD4;  /* Cyan */
+        color: #ECEFF1;  /* Light text */
         padding: 1rem;
         border-radius: 0.5rem;
         margin: 1rem 0;
+    }
+    .info-box h3 {
+        color: #00E5FF;  /* Bright cyan */
+        margin-top: 0;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -52,7 +58,7 @@ with st.sidebar:
     - Fast and accurate
     """)
 
-    st.header("⚙️ Settings")
+    st.header("Settings")
     show_cost = st.checkbox("Show estimated cost", value=False)
 
     st.markdown("---")
@@ -188,7 +194,7 @@ else:
     # Instructions when no file uploaded
     st.markdown("""
     <div class="info-box">
-        <h3>🚀 How to use:</h3>
+        <h3> How to use:</h3>
         <ol>
             <li>Select source and target languages</li>
             <li>Upload your PDF file</li>
@@ -200,13 +206,13 @@ else:
 
     st.markdown("""
     <div class="info-box">
-        <h3>✨ Features:</h3>
+        <h3> Features:</h3>
         <ul>
-            <li>🔄 Bidirectional translation (English ↔ Spanish)</li>
-            <li>📊 Handles multi-page documents</li>
-            <li>🎯 Preserves document structure</li>
-            <li>⚡ Fast processing with GPT-4o-mini</li>
-            <li>💰 Cost-effective (~$0.01-0.05 per document)</li>
+            <li> Bidirectional translation (English ↔ Spanish)</li>
+            <li> Handles multi-page documents</li>
+            <li> Preserves document structure</li>
+            <li> Fast processing with GPT-4o-mini</li>
+            <li> Cost-effective (~$0.01-0.05 per document)</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
